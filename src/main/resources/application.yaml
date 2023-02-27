@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    generate-unique-name: false
+    name: demo2_app
+    url: jdbc:h2:mem:demo2_app
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  flyway:
+    user: sa
+    password:
+    baseline-on-migrate: false
+    url: jdbc:h2:mem:demo2_app
+  jpa:
+    hibernate:
+      ddl-auto: none
